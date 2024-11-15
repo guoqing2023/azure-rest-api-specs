@@ -882,7 +882,7 @@
                   "default": {
                       "description": "Failure",
                       "schema": {
-                          "$ref": "#/definitions/CommunicationError"
+                          "$ref": "../../../Common/stable/2021-03-07/common.json#/definitions/CommunicationError"
                       }
                   }
               },
@@ -895,34 +895,6 @@
       }
   },
   "definitions": {
-      "CommunicationError": {
-          "required": [
-              "code",
-              "message"
-          ],
-          "type": "object",
-          "properties": {
-              "code": {
-                  "type": "string"
-              },
-              "message": {
-                  "type": "string"
-              },
-              "target": {
-                  "type": "string"
-              },
-              "details": {
-                  "type": "array",
-                  "items": {
-                      "$ref": "#/definitions/CommunicationError"
-                  },
-                  "readOnly": true
-              },
-              "innererror": {
-                  "$ref": "#/definitions/CommunicationError"
-              }
-          }
-      },
       "PhoneNumberCapabilities": {
           "description": "Capabilities of a phone number.",
           "required": [
@@ -1073,7 +1045,7 @@
                   "type": "string"
               },
               "error": {
-                  "$ref": "#/definitions/CommunicationError"
+                  "$ref": "../../../Common/stable/2021-03-07/common.json#/definitions/CommunicationError"
               },
               "id": {
                   "description": "Id of operation.",
